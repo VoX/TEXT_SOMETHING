@@ -14,7 +14,7 @@ ioArea.append(btn);
 //event to button
 btn.click(function(){
 	message.text("Y U CLICK!");
-	
+	counter = 0;
 });
 
 
@@ -36,6 +36,13 @@ setInterval(function() {
       // Do something every 0.5 seconds, like update the counter
       counter = counter + 1;
       counterDisplay.text(counter);
+
+      //oh lets do some flow control
+      if(counter > 10){
+      	message.text("HOLY SHIT LOOK AT ALL THESE COUNTS!");
+      }
+
+
 }, 500);
 
 }(window.jQuery));
