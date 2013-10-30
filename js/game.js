@@ -15,6 +15,7 @@ ioArea.append(btn);
 btn.click(function(){
 	message.text("Y U CLICK!");
 	counter = 0;
+	secretCounter++;
 });
 
 
@@ -30,7 +31,13 @@ ioArea.append(counterLabel);
 var counterDisplay = $("<h2>0</h2>");
 ioArea.append(counterDisplay);
 
+//reward for clicking :)
+//SUCH ESCAPE
+var superSecret = $("<div>THIS IS A SECRET</div>");
+ioArea.append(superSecret);
+
 var counter = 0;
+var secretCounter = 0;
 
 setInterval(function() {
       // Do something every 0.5 seconds, like update the counter
@@ -40,6 +47,13 @@ setInterval(function() {
       //oh lets do some flow control
       if(counter > 10){
       	message.text("HOLY SHIT LOOK AT ALL THESE COUNTS!");
+      }
+      // is this bad or bad
+      if(secretCounter % 2 == 1){
+      	superSecret.show();
+      }
+      else{
+      	superSecret.hide();
       }
 
 
